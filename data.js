@@ -3,32 +3,33 @@
 
 export default [
     {
-        id: 4,
-        title: "E-commerce project",
-        description_cz: "Ukázka řešení pro CDB e-shop",
-        description_en: "Simple solution for CBD e-shop",
-        img: "https://i.ibb.co/vj8RFKG/Sni-mek-obrazovky-2022-04-26-v-10-05-54.png",
+        id: 44242,
+        title: "BJJ Library",
+        description_cz: "Knihovna videií o BJJ s firebase back-endem",
+        description_en: "BJJ library with firebase back-end",
+        img: "https://i.ibb.co/0MZt2ZN/Sni-mek-obrazovky-2022-06-07-v-20-11-32.png",
         tc1: "React",
         tc2: "TailwindCSS",
         tc3: "Javascript",
-        tc4: "HTML",
-        tc5: "CSS",
-        link: "https://cbd-eshop.vercel.app/",
-        git: "https://github.com/dvenomb98/CBD-eshop"
+        tc4: "Firebase",
+        link: "https://jjltest.vercel.app/",
+        git: "https://github.com/dvenomb98/JJlibrary"
     },
     {
-        id: 1,
-        title: "Hulu clone",
-        description_cz: "Aplikace na hledání filmů",
-        description_en: "A movie search application",
-        img: "https://i.ibb.co/k5bLDd0/hulu.png",
+        id: 4,
+        title: "E-shop",
+        description_cz: "Performance eshop s firebase back-endem",
+        description_en: "Performance eshop with firebase back-end",
+        img: "https://i.ibb.co/THXQBzm/Sni-mek-obrazovky-2022-06-07-v-20-10-52.png",
         tc1: "React",
-        tc2: "NextJS",
+        tc2: "TailwindCSS",
         tc3: "Javascript",
-        tc4: "TailwindCSS",
-        link: "https://hulu-one-pearl.vercel.app/",
-        git: "https://github.com/dvenomb98/hulu-clone"
+        tc4: "Firebase",
+        
+        link: "https://eshop-liard.vercel.app/",
+        git: "https://github.com/dvenomb98/Eshop"
     },
+    
 
     {
         id: 2,
@@ -47,8 +48,8 @@ export default [
     {
         id: 3,
         title: "To-do app",
-        description_cz: "Todo appka s mnoha vychytávkama",
-        description_en: "Todo app with added features",
+        description_cz: "Todo appka s mnoha vychytávkama (první projekt)",
+        description_en: "Todo app with added features (first project)",
         img: "https://i.ibb.co/P6wB30x/todo.png",
         tc1: "HTML",
         tc2: "CSS",
