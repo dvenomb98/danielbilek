@@ -45,6 +45,7 @@ const Index: NextPage<IndexProps> = ({ posts, uniqueTags }) => {
         const { slug, frontmatter } = post;
         return <PostSummary key={frontmatter.title} post={{ slug, frontmatter }} />;
       })}
+      {!filteredPosts.length && <h4>No posts have been found.</h4>}
     </PageLayout>
   );
 };
