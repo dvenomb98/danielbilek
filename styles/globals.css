@@ -24,6 +24,6 @@
   }
 
   .markdown {
-    @apply prose-a:text-neutral-blue prose-a:no-underline hover:prose-a:underline prose-headings:text-light-text-primary dark:prose-headings:text-dark-text-primary prose-p:text-light-text-secondary dark:prose-p:text-dark-text-secondary prose-p:text-base prose-strong:text-dark-text-primary dark:prose-strong:text-dark-text-primary
+    @apply prose-a:text-neutral-blue prose-a:no-underline hover:prose-a:underline prose-headings:text-light-text-primary dark:prose-headings:text-dark-text-primary prose-p:text-light-text-secondary dark:prose-p:text-dark-text-secondary prose-p:text-base prose-strong:text-light-text-primary dark:prose-strong:text-dark-text-primary
   }
 }

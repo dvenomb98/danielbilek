@@ -2,7 +2,7 @@ const allProjects = [
   {
     title: 'Regiojet',
     description:
-      'RegioJet is a Czech transport company that provides train and bus services both within the Czech Republic and across Europe. Their website is a one-stop-shop for anyone looking to purchase tickets for their own fleet of trains and buses. With a user-friendly interface, easy online booking, and competitive pricing, RegioJet is a popular choice for travelers across the continent.',
+      'Currently developing new features at Regiojet. Regiojet is a Czech transport company that provides train and bus services both within the Czech Republic and across Europe. Their website is a one-stop-shop for anyone looking to purchase tickets for their own fleet of trains and buses. With a user-friendly interface, easy online booking, and competitive pricing, RegioJet is a popular choice for travelers across the continent.',
     website: 'https://regiojet.com',
     github: '',
     image: '/images/regiojet.png',

@@ -1,7 +1,7 @@
 ---
 title: "The most powerful NextJS feature"
 author: "Daniel Bílek"
-date: "2023-02-20"
+date: "2023-03-01"
 summary: "Next.js is a popular React framework that allows developers to build server-rendered React applications. One of the coolest features of Next.js is its API Routes feature, which allows developers to create serverless API endpoints without having to set up a separate server."
 draft: false
 tags:

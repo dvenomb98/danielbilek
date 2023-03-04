@@ -4,6 +4,7 @@ import '@/styles/globals.css';
 import { DefaultSeo } from 'next-seo';
 import { ThemeProvider } from 'next-themes';
 import type { AppProps } from 'next/app';
+import { Analytics } from '@vercel/analytics/react';
 
 const seoDefaultTitle = 'Daniel Bílek';
 const seoDefaultDescription =
@@ -18,6 +19,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
         <Footer />
       </ThemeProvider>
+      <Analytics />
     </>
   );
 }
