@@ -7,6 +7,7 @@ import type { AppProps } from 'next/app';
 import { Analytics } from '@vercel/analytics/react';
 import Messenger from '@/components/atoms/Messenger';
 import { useToggle } from 'react-use';
+import useMobileWidth from '@/hooks/useMobile';
 
 const seoDefaultTitle = 'Daniel Bílek';
 const seoDefaultDescription =
@@ -14,13 +15,14 @@ const seoDefaultDescription =
 
 export default function App({ Component, pageProps }: AppProps) {
   const [isOpen, toggle] = useToggle(false);
+  const { isMobile } = useMobileWidth();
   return (
     <>
       <DefaultSeo title={seoDefaultTitle} description={seoDefaultDescription} />
       <ThemeProvider defaultTheme="dark" attribute="class">
         <Navbar />
         <Component {...pageProps} />
-        <Messenger isOpen={isOpen} toggle={toggle} />
+        {!isMobile && <Messenger isOpen={isOpen} toggle={toggle} />}
         <Footer />
       </ThemeProvider>
       <Analytics />
