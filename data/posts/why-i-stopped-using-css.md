@@ -9,8 +9,6 @@ tags:
   - Tailwind
 ---
 
-# Why I Stopped Using CSS and Started Using Tailwind
-
 As a front-end developer, I have always relied heavily on CSS to style and layout my web projects. However, in recent years I have started to shift my focus towards a new framework called Tailwind. In this post, I will explain why I made this switch and how it has improved my workflow and productivity.
 
 ## The Problem with Traditional CSS
