@@ -69,6 +69,7 @@ const Modal: React.FC<ModalProps> = ({
                 )}
                 {children}
                 <XMarkIcon
+                  ref={cancelButtonRef}
                   role="button"
                   aria-roledescription="Close modal"
                   className="absolute w-5 h-5 top-6 right-5 cursor-pointer"
