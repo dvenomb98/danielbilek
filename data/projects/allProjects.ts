@@ -8,6 +8,14 @@ const allProjects = [
     image: '/images/regiojet.png',
   },
   {
+    title: 'Dojo - BJJ Free',
+    description:
+      'A passion project dedicated to providing free, high-quality Brazilian Jiu-Jitsu courses to enthusiasts worldwide. ',
+    website: 'https://dojo-beryl.vercel.app',
+    github: 'https://github.com/dvenomb98/frontend',
+    image: '/images/dojo.webp',
+  },
+  {
     title: 'Family app',
     description:
       'The Family Todo App is the ultimate household task management web app designed for couples. With easy task creation, progress tracking, and a rewards system, this app keeps you and your partner organized and motivated to complete household chores and tasks.',
