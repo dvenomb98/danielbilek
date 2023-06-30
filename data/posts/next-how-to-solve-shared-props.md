@@ -11,11 +11,11 @@ tags:
 
 # Solving Next.js Shared Props Challenge with Cache Solution
 
-Next.js is a powerful and flexible framework for building React applications. However, one limitation it currently has is that the `getStaticProps` function, which allows you to fetch data at build time, can't be used at the app level. This means that if you want to share common props like header data, footer data, etc., you have to make separate API calls for all pages. But worry not, I have figured out a way around this limitation using a cache solution.
+Next.js is a powerful and flexible framework for building React applications. However, one limitation it currently has is that the **getStaticProps** function, which allows you to fetch data at build time, can't be used at the app level. This means that if you want to share common props like header data, footer data, etc., you have to make separate API calls for all pages. But worry not, I have figured out a way around this limitation using a **cache solution**.
 
 ## Implementing the Cache Solution
 
-My solution was to create a `getCachedData` function that fetches data and stores it in a cache. This cache is stored globally, allowing all pages to access the data without making additional requests. To use the cached data, I wrote a `getSharedProps` function which calls `getCachedData`, and can be used within `getStaticProps` on all pages. This means that only one request will be made, and all subsequent data for the pages will come from the cache.
+My solution was to create a **getCachedData** function that fetches data and stores it in a cache. This cache is stored globally, allowing all pages to access the data without making additional requests. To use the cached data, I wrote a **getSharedProps** function which calls **getCachedData**, and can be used within **getStaticProps** on all pages. This means that only one request will be made, and all subsequent data for the pages will come from the cache.
 
 Here are the functions I created:
 
@@ -59,14 +59,21 @@ export async function getCachedData<T>(
 
   return data;
 }
+```
 
+
+## Creating getSharedProps 
+
+```javascript
 export const getSharedProps = async (
   locale: string,
 ): Promise<SharedPropsType> => {
 
+  // First argument is fetch function and second is cache key
+
   const data = await getCachedData(
-    () => getStrapiSingleType<MenuTopEntity>('menu-top', locale, 'deep,4'),
-    `menu-top-${locale}`,
+    () => fetchData<MenuTopEntity>('menu-top', locale),
+    `menu-top-${locale}`
   );
 
   return {
@@ -75,7 +82,9 @@ export const getSharedProps = async (
 };
 ```
 
-## Applying to AllPAges
+
+
+## Applying solution for each page
 
 Then, on each page, you can use the getStaticProps function like this:
 
