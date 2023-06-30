@@ -25,7 +25,7 @@ export default function App({ Component, pageProps }: AppProps) {
         {!isMobile && <Messenger isOpen={isOpen} toggle={toggle} />}
         <Footer />
       </ThemeProvider>
-      <Analytics mode="development" />
+      <Analytics />
     </>
   );
 }
