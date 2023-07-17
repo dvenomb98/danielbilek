@@ -8,6 +8,14 @@ const allProjects = [
     image: '/images/regiojet.png',
   },
   {
+    title: 'Online game - Yahtzee',
+    description:
+      'Yatzhee Online Game is a web-based implementation of the classic dice game, Yatzhee, built with NextJS. This is a multiplayer game where players can compete against their friends in real time.',
+    website: 'https://yahtzee-mu.vercel.app',
+    github: 'https://github.com/dvenomb98/kniffel',
+    image: '/images/yat.webp',
+  },
+  {
     title: 'Dojo - BJJ Free',
     description:
       'A passion project dedicated to providing free, high-quality Brazilian Jiu-Jitsu courses to enthusiasts worldwide. ',
@@ -22,14 +30,6 @@ const allProjects = [
     website: 'https://family-app-eight.vercel.app',
     github: 'https://github.com/dvenomb98/family-app',
     image: '/images/family-app.png',
-  },
-  {
-    title: 'Online game - Yahtzee',
-    description:
-      'Yatzhee Online Game is a web-based implementation of the classic dice game, Yatzhee, built with NextJS. This is a multiplayer game where players can compete against their friends in real time.',
-    website: 'https://yahtzee-mu.vercel.app',
-    github: 'https://github.com/dvenomb98/kniffel',
-    image: '/images/yat.webp',
   },
 
   // {
