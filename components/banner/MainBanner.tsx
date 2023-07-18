@@ -3,7 +3,7 @@ import { ButtonLink } from '../atoms/Button';
 
 const MainBanner: FC = () => {
   return (
-    <section className="flex flex-col items-center gap-10 text-center lg:py-20 bg-[url('/images/grid.png')] bg-center sm:bg-none">
+    <section className="flex flex-col items-center gap-10 text-center lg:py-20 bg-[url('/images/grid.png')] bg-center sm:bg-none bg-no-repeat">
       <h1 className="text-header sm:text-headerMobile font-[900] leading-tight animated-text">
         Shaping Digital Futures with Expert Front End Engineering
       </h1>

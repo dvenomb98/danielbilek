@@ -6,7 +6,7 @@ interface PageLayoutProps {
   className?: string;
 }
 
-export const layoutClasses = 'container mx-auto px-8 lg:px-16';
+export const layoutClasses = 'container mx-auto px-8 lg:px-16 ';
 
 const PageLayout: React.FC<PageLayoutProps> = ({ children, className }) => {
   return (

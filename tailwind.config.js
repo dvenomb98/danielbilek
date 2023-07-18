@@ -59,7 +59,13 @@ module.exports = {
       screens: {
         sm: { max: `${BREAKPOINTS.SM.MAX}px` },
         lg: `${BREAKPOINTS.LG.MIN}px`,
-        fullhd: `${BREAKPOINTS.FULLHD.MIN}px`,
+      },
+      container: {
+        screens: {
+          sm: { max: `${BREAKPOINTS.SM.MAX}px` },
+          lg: `${BREAKPOINTS.LG.MIN}px`,
+          xl: "1440px"
+        },
       },
       extend: {
         fontFamily: {
