@@ -6,13 +6,16 @@
 
 @layer base {
     body {
-      @apply text-light-text-primary dark:text-dark-text-primary bg-light-primary-background dark:bg-dark-primary-background text-base
+      @apply text-light-text-primary dark:text-dark-text-primary bg-light-primary-background dark:bg-dark-primary-background text-base font-sans 
     } 
   }
 
 @layer components {
+  .defaultTextColor {
+    @apply text-light-text-primary dark:text-dark-text-primary
+  }
   .overlay {
-    @apply fixed inset-0 bg-neutral-overlay opacity-30 z-50
+    @apply fixed inset-0 bg-dark-secondary-background opacity-30 z-50
   }
 
   .borderDefaultColor{
@@ -26,4 +29,76 @@
   .markdown {
     @apply prose-a:text-neutral-blue prose-a:no-underline hover:prose-a:underline prose-headings:text-light-text-primary dark:prose-headings:text-dark-text-primary prose-p:text-light-text-secondary dark:prose-p:text-dark-text-secondary prose-p:text-base prose-strong:text-light-text-primary dark:prose-strong:text-dark-text-primary
   }
+
+  .animated-text {
+    background: linear-gradient(90deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 10s ease infinite;
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .animated-border {
+    @apply border-neutral-graylight dark:border-neutral-gray;
+    position: relative;
+    z-index: 1;
+  }
+
+  .animated-border::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -5px; /* Half of border width */
+    background-image: linear-gradient(90deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+    background-size: 400% 400%;
+    border: 4px solid; /* Adjust border width as needed */
+    animation: gradient 10s ease infinite;
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    -webkit-text-fill-color: transparent;
+    box-decoration-break: clone;
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/images/grid.svg");
+    background-size: 33.33% 33.33%;
+    background-blend-mode: multiply;
+  }
+
+  
+  
 }

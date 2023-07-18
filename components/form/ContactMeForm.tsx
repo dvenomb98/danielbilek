@@ -72,7 +72,6 @@ const ContactMeForm: React.FC = () => {
               <FormInput name="name" placeholder="Name *" />
               <FormInput name="company" placeholder="Company (optional)" />
               <FormInput name="email" type="email" placeholder="Email *" />
-
               <FormTextArea name="message" email="message" placeholder="Message *" rows={8} />
 
               {status === FormStatus.ERROR && (

@@ -1,7 +1,13 @@
 import { Dialog, Transition } from '@headlessui/react';
 import { XMarkIcon } from '@heroicons/react/24/outline';
 import classNames from 'classnames';
+import { Inter } from 'next/font/google';
 import React, { Fragment, useRef } from 'react';
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+});
 
 interface ModalProps {
   title?: string;
@@ -31,7 +37,7 @@ const Modal: React.FC<ModalProps> = ({
     >
       <Dialog
         as="div"
-        className="relative z-[999]"
+        className={classNames(inter.variable, 'font-sans relative z-[999]')}
         initialFocus={cancelButtonRef}
         onClose={onClose ? onClose : () => undefined}
       >
@@ -64,9 +70,7 @@ const Modal: React.FC<ModalProps> = ({
                 )}
               >
                 {!!title && <Dialog.Title className="font-bold text-h2">{title}</Dialog.Title>}
-                {!!description && (
-                  <Dialog.Description className="text-secondary">{description}</Dialog.Description>
-                )}
+                {!!description && <Dialog.Description>{description}</Dialog.Description>}
                 {children}
                 <XMarkIcon
                   ref={cancelButtonRef}

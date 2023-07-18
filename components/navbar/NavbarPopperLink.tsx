@@ -1,3 +1,4 @@
+import { ArrowUpRightIcon } from '@heroicons/react/20/solid';
 import classNames from 'classnames';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -19,11 +20,12 @@ const NavbarPopperLink: React.FC<NavbarPopperLinkProps> = ({ link, onClick }) =>
     <Link
       href={link.href}
       onClick={onClick}
-      className="p-5 hover:bg-light-secondary-background dark:hover:bg-dark-primary-background/50 rounded-sm transition ease-in-out"
+      className="p-5 text-secondary rounded-lg transition ease-in-out hover:defaultTextColor flex items-start"
     >
       <li className={classNames(isActive && 'border-b-2 border-neutral-blue', 'w-fit')}>
         {link.title}
       </li>
+      <ArrowUpRightIcon className="w-3 h-3" />
     </Link>
   );
 };

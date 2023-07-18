@@ -11,6 +11,7 @@ import useMobileWidth from '@/hooks/useMobile';
 import ProjectCard, { Project } from '@/components/project/ProjectCard';
 import { getAllVisiblePosts } from '@/utils/fetchUtils';
 import { ParsedUrlQuery } from 'querystring';
+import MainBanner from '@/components/banner/MainBanner';
 
 interface HomeProps {
   featuredPost: {
@@ -25,6 +26,7 @@ const Home: React.FC<HomeProps> = ({ featuredPost, featuredProject }) => {
 
   return (
     <PageLayout>
+      <MainBanner />
       {/* LATEST */}
       <PageHeader header="Latest" />
       <PostSummary

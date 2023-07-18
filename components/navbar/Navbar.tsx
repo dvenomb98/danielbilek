@@ -12,24 +12,26 @@ const Navbar: React.FC = () => {
   const { isMobile } = useMobileWidth();
 
   return (
-    <nav className={classNames(layoutClasses, 'py-8 flex justify-between items-center')}>
-      <Logo />
+    <nav className="border-b borderDefaultColor bg-">
+      <div className={classNames(layoutClasses, 'py-8 flex justify-between items-center')}>
+        <Logo />
 
-      {isMobile ? (
-        <div className="flex gap-5">
-          <ThemeSwitcher />
-          <NavbarPopper />
-        </div>
-      ) : (
-        <div className="flex gap-10 items-center">
-          <ul className="flex gap-10">
-            {data.map((link) => (
-              <NavbarLink key={link.href} link={link} />
-            ))}
-          </ul>
-          <ThemeSwitcher />
-        </div>
-      )}
+        {isMobile ? (
+          <div className="flex gap-5">
+            <ThemeSwitcher />
+            <NavbarPopper />
+          </div>
+        ) : (
+          <div className="flex gap-10 items-center">
+            <ul className="flex gap-10">
+              {data.map((link) => (
+                <NavbarLink key={link.href} link={link} />
+              ))}
+            </ul>
+            <ThemeSwitcher />
+          </div>
+        )}
+      </div>
     </nav>
   );
 };

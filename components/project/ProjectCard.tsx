@@ -22,9 +22,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   const github = project?.github;
 
   return (
-    <div className="flex flex-col gap-5 border-2 borderDefaultColor rounded-md">
+    <div className="flex flex-col gap-5 border  borderDefaultColor rounded-lg">
       <ExternalLink href={website} isNonTextable>
-        <div className="w-full h-64 overflow-hidden relative">
+        <div className="w-full h-64 overflow-hidden relative rounded-t-lg">
           <Image src={image} fill alt={title} className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-dark-primary-background to-transparent opacity-10 hover:opacity-50 transition-opacity duration-300" />
         </div>

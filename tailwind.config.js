@@ -18,26 +18,26 @@ module.exports = {
       colors: {
         dark: {
           primary: {
-            background: "#111827",
+            background: "#09090b",
           },
           secondary: {
-            background: "#1f2937",
+            background: "#18181b",
           },
           text: {
             primary: "#e5e7eb",
-            secondary: "#9ca3af"
+            secondary: "#88888"
           }
         },
         light: {
           primary: {
-            background: "#f1f5f9"
+            background: "#fff"
           },
           secondary: {
-            background: "#e2e8f0",
+            background: "#e5e5e5",
           },
           text: {
             primary: "#111827",
-            secondary: "#374151"
+            secondary: "#666"
           }
         },
         neutral: {
@@ -62,6 +62,9 @@ module.exports = {
         fullhd: `${BREAKPOINTS.FULLHD.MIN}px`,
       },
       extend: {
+        fontFamily: {
+          sans: ['var(--font-inter)'],
+        },
         fontSize: {
           small: '0.95rem',
           base: '1.125rem', 
@@ -69,6 +72,7 @@ module.exports = {
           h3: '1.5rem', 
           h2: '1.875rem', 
           h1: '2.25rem',
+          headerMobile: "3rem",
           header: "4rem"
         },
         height: {

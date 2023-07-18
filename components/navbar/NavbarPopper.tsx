@@ -11,7 +11,7 @@ const NavbarPopper: React.FC = () => {
         <Bars3CenterLeftIcon className="w-8 h-8" />
       </Popover.Button>
       <Popover.Overlay className="overlay" />
-      <Popover.Panel className="absolute right-0 bg-light-primary-background dark:bg-dark-secondary-background z-50 rounded-sm w-72">
+      <Popover.Panel className="absolute right-0 bg-light-primary-background dark:bg-dark-primary-background z-50 rounded-sm w-72">
         {({ close }) => (
           <ul className="flex flex-col">
             {data.map((link) => (
