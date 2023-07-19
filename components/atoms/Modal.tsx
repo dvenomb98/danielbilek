@@ -66,7 +66,7 @@ const Modal: React.FC<ModalProps> = ({
             >
               <Dialog.Panel
                 className={classNames(
-                  'relative overflow-hidden rounded-md text-left w-full lg:max-w-2xl bg-light-primary-background dark:bg-dark-primary-background p-6 flex flex-col gap-5',
+                  'relative overflow-hidden rounded-lg text-left w-full lg:max-w-2xl bg-light-primary-background dark:bg-dark-primary-background p-6 flex flex-col gap-5',
                 )}
               >
                 {!!title && <Dialog.Title className="font-bold text-h2">{title}</Dialog.Title>}

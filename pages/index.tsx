@@ -2,7 +2,6 @@ import PageHeader from '@/components/atoms/PageHeader';
 import PageLayout from '@/components/layouts/PageLayout';
 import React from 'react';
 import { FrontMatter } from './blog';
-import PostSummary from '@/components/blog/PostSummary';
 import InternalLink from '@/components/atoms/InternalLink';
 import { ArrowRightIcon } from '@heroicons/react/24/solid';
 import FeaturedProject from '@/components/project/FeaturedProject';
@@ -10,18 +9,18 @@ import allProjects from '@/data/projects/allProjects';
 import useMobileWidth from '@/hooks/useMobile';
 import ProjectCard, { Project } from '@/components/project/ProjectCard';
 import { getAllVisiblePosts } from '@/utils/fetchUtils';
-import { ParsedUrlQuery } from 'querystring';
 import MainBanner from '@/components/banner/MainBanner';
+import PostCards from '@/components/blog/PostCard';
 
 interface HomeProps {
-  featuredPost: {
-    slug: ParsedUrlQuery;
+  featuredPosts: {
+    slug: string;
     frontmatter: FrontMatter;
-  };
+  }[];
   featuredProject: Project;
 }
 
-const Home: React.FC<HomeProps> = ({ featuredPost, featuredProject }) => {
+const Home: React.FC<HomeProps> = ({ featuredPosts, featuredProject }) => {
   const { isMobile } = useMobileWidth();
 
   return (
@@ -29,10 +28,7 @@ const Home: React.FC<HomeProps> = ({ featuredPost, featuredProject }) => {
       <MainBanner />
       {/* LATEST */}
       <PageHeader header="Latest" />
-      <PostSummary
-        key={featuredPost.frontmatter.title}
-        post={{ slug: featuredPost.slug, frontmatter: featuredPost.frontmatter }}
-      />
+      <PostCards posts={featuredPosts} />
       <InternalLink href="/blog" className="self-end">
         <span className="flex items-center gap-2">
           View all posts
@@ -60,12 +56,12 @@ export default Home;
 
 export async function getStaticProps() {
   const posts = getAllVisiblePosts();
-  const featuredPost = posts[0];
+  const featuredPosts = posts.slice(-2);
   const featuredProject = allProjects[0];
 
   return {
     props: {
-      featuredPost,
+      featuredPosts,
       featuredProject,
     },
   };

@@ -12,7 +12,7 @@ const FeaturedProject: React.FC<FeaturedProjectProps> = ({ project }) => {
   const { title, image, website, description } = project;
 
   return (
-    <div className="flex gap-5 border border-dashed borderDefaultColor rounded-md">
+    <div className="flex gap-5 border borderDefaultColor rounded-lg">
       <ExternalLink href={website} isNonTextable>
         <div className="w-96 h-full overflow-hidden relative">
           <Image src={image} fill alt={title} className="w-full h-full object-cover" />
