@@ -64,7 +64,7 @@ module.exports = {
         screens: {
           sm: { max: `${BREAKPOINTS.SM.MAX}px` },
           lg: `${BREAKPOINTS.LG.MIN}px`,
-          xl: "1440px"
+          xl: "1550px"
         },
       },
       extend: {
