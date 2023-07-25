@@ -16,7 +16,7 @@ const boxClasses = 'flex flex-col border-b borderDefaultColor pb-10';
 
 const PostAside: FC<PostAsideProps> = ({ author, tags, prev, next }) => {
   return (
-    <aside className="flex flex-col gap-10 text-small">
+    <aside className="flex flex-col gap-10 text-small xl:basis-3/4">
       <AuthorInfo author={author} />
 
       <div className={classNames(boxClasses, 'pt-10 border-t')}>

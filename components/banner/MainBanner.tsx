@@ -12,7 +12,7 @@ const MainBanner: FC = () => {
         robust, and accessible front end solutions, ensuring seamless user interactions and a solid
         digital foundation for your business.
       </p>
-      <div className="flex gap-10 items-center justify-center sm:flex-col">
+      <div className="flex gap-10 sm:gap-4 items-center justify-center sm:flex-col">
         <ButtonLink href="/projects" variant="primary">
           Projects
         </ButtonLink>

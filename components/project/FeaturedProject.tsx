@@ -14,7 +14,7 @@ const FeaturedProject: React.FC<FeaturedProjectProps> = ({ project }) => {
   return (
     <div className="flex gap-5 border borderDefaultColor rounded-lg">
       <ExternalLink href={website} isNonTextable>
-        <div className="w-96 h-full overflow-hidden relative">
+        <div className="w-96 h-full overflow-hidden relative rounded-l-lg">
           <Image src={image} fill alt={title} className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-dark-primary-background to-transparent opacity-10 hover:opacity-50 transition-opacity duration-300" />
         </div>

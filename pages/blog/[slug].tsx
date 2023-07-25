@@ -42,9 +42,10 @@ const SinglePost: NextPage<SinglePostProps> = ({ frontmatter, content, prev, nex
       <PageLayout>
         <p className="text-secondary -mb-10">{formatDate(date)}</p>
         <PageHeader header={title} />
-        <div className="flex justify-between gap-10 sm:flex-col-reverse sm:gap-16">
+        <div className="flex justify-between gap-10 sm:flex-col-reverse sm:gap-16 xl:justify-start">
           <PostAside author={author} tags={tags} prev={prev} next={next} />
-          <ReactMarkdown className="prose markdown">{content}</ReactMarkdown>
+
+          <ReactMarkdown className="prose markdown xl:max-w-none">{content}</ReactMarkdown>
         </div>
       </PageLayout>
     </>
