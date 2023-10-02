@@ -57,7 +57,7 @@ export default Home;
 export async function getStaticProps() {
   const posts = getAllVisiblePosts();
   const featuredPosts = posts.slice(-2);
-  const featuredProject = allProjects[0];
+  const featuredProject = allProjects.find((p) => p.type === 'featured');
 
   return {
     props: {

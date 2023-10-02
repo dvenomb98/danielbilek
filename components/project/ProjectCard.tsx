@@ -1,5 +1,5 @@
 import { logoClasses } from '../atoms/Contacticons';
-import { ArrowRightIcon } from '@heroicons/react/24/solid';
+import { ArrowRightIcon, CheckIcon } from '@heroicons/react/24/solid';
 import Image from 'next/image';
 import React from 'react';
 import Github from '../logos/Github';
@@ -11,6 +11,7 @@ export interface Project {
   github?: string;
   website: string;
   description: string;
+  features?: string[] | undefined;
 }
 
 interface ProjectCardProps {
@@ -18,7 +19,7 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
-  const { title, image, website, description } = project;
+  const { title, image, website, description, features } = project;
   const github = project?.github;
 
   return (
@@ -33,6 +34,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         <h3 className="text-h3 font-bold">{title}</h3>
         <p className="text-secondary text-small">{description}</p>
       </div>
+      {!!features && (
+        <ul className="flex flex-col pl-5">
+          {features.map((feature, index) => (
+            <div key={index} className="flex items-center gap-2">
+              <CheckIcon className="w-5 h-5 text-neutral-bluedark" />
+              <li className="text-small ">{feature}</li>
+            </div>
+          ))}
+        </ul>
+      )}
       <div className="mt-auto px-5 pb-5 flex items-center justify-between">
         <ExternalLink href={website}>
           <span className="flex items-center gap-2">
